@@ -7,5 +7,6 @@ namespace BigMath
 {
     public class Class1
     {
+
     }
 }
