@@ -20,5 +20,26 @@ namespace BigMath
             }
             return 1;
         }
+
+        /// <summary>
+        /// Evaluates the least common multiple.
+        /// </summary>
+        /// <param name="int1"></param>
+        /// <param name="int2"></param>
+        /// <returns></returns>
+        public static long LeastCommonMultiple(int int1, int int2)
+        {
+            int min = Math.Min(int1, int2);
+            int max = Math.Max(int1, int2);
+            long currentValue = min;
+            while (true)
+            {
+                if (currentValue % max == 0)
+                {
+                    return currentValue;
+                }
+                currentValue += min;
+            }
+        }
     }
 }
