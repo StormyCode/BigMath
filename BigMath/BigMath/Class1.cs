@@ -47,5 +47,22 @@ namespace BigMath
                 currentValue += min;
             }
         }
+
+        /// <summary>
+        /// Evaluates wether a given integer is a prime or not.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static bool IsPrime(int value)
+        {
+            for (int i = 2; i < ((int)Math.Sqrt(value))+1; i++)
+            {
+                if (value % i == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }
