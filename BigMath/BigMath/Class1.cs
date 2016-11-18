@@ -55,7 +55,7 @@ namespace BigMath
         /// <returns></returns>
         public static bool IsPrime(int value)
         {
-            for (int i = 2; i < ((int)Math.Sqrt(value))+1; i++)
+            for (int i = 2; i < ((int)Math.Sqrt(value)) + 1; i++)
             {
                 if (value % i == 0)
                 {
@@ -63,6 +63,24 @@ namespace BigMath
                 }
             }
             return true;
+        }
+
+        /// <summary>
+        /// Gets a list of all divisors.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static List<int> GetDivisors(int value)
+        {
+            List<int> divs = new List<int>();
+            for (int i = 1; i < value + 1; i++)
+            {
+                if (value % i == 0)
+                {
+                    divs.Add(i);
+                }
+            }
+            return divs;
         }
     }
 }
