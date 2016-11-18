@@ -7,6 +7,12 @@ namespace BigMath
 {
     public class BigMath
     {
+        /// <summary>
+        /// Evaluates the greatest common divisor.
+        /// </summary>
+        /// <param name="int1"></param>
+        /// <param name="int2"></param>
+        /// <returns></returns>
         public static int GreatestCommonDivisor(int int1, int int2)
         {
             int min = Math.Min(int1, int2);
